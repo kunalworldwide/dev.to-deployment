@@ -1,8 +1,8 @@
 ---
 title: Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 published: false
-description: In this section, I shall describe how you can get the artifact from the release pipeline.
-tags: 'azure, devops, datafactory'
+description: Let's see the latest available k8s tools
+tags: 'azure, devops, kubernetes'
 cover_image: https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif
 canonical_url: null
 id: 
