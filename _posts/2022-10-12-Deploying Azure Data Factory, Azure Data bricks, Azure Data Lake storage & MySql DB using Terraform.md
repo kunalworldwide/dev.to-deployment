@@ -1,11 +1,12 @@
 ---
 title: 'Deploying Azure Data Factory, Azure Data bricks, Azure Data Lake storage & MySql DB using Terraform'
-published: false
+published: true
 description: 'Here I am going to share some terraform code to deploy ADF, ADLS, ADB, and several other necessary resources.'
 tags: 'azure, terraform, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:828/format:webp/1*u3A9mWuZN_E-v-W8pi12uw.png'
 canonical_url: null
-id: 1734087
+id: 1734116
+date: '2024-01-18T18:58:09Z'
 ---
 
 

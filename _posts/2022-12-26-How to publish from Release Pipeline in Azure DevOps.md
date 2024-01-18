@@ -5,7 +5,7 @@ description: 'In this section, I shall describe how you can get the artifact fro
 tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*A_IveIUhnhHOzi_a04hecA.png'
 canonical_url: null
-id: 1734103
+id: 1734117
 ---
 
 # How to publish from Release Pipeline in Azure DevOps

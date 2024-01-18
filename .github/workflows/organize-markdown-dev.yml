@@ -1,21 +1,21 @@
-name: Move Markdown on Merge
-
+name: Move Markdown on push to dev
 on:
-  pull_request:
-    types: [closed]
-    branches:
-      - main
-  workflow_dispatch:
+    push:
+        branches:
+        - development
+        paths-ignore:
+        - '_posts/**'
+
+    workflow_dispatch:
 jobs:
   move-markdown:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: main
+        ref: development
         fetch-depth: 0
 
     - name: Move Markdown Files
@@ -29,7 +29,7 @@ jobs:
 
 
     # Commit and push all changed files.
-    - name: GIT push to main
+    - name: GIT push to development
       run: |
         git config --global user.name github-actions-bot
         git config --global user.email github-actions@github.com
