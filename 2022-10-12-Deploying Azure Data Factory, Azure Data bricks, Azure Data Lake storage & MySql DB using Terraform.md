@@ -8,6 +8,7 @@ canonical_url: null
 id: 
 ---
 
+
 # Deploying Azure Data Factory, Azure Data bricks, Azure Data Lake storage & MySql DB using Terraform
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
