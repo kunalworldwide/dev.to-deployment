@@ -1,25 +1,17 @@
 ---
-title: A comprehensive list of Azure Best Practices
+title: Mastering Kubernetes A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know
 published: false
-description: Azure best practices assist businesses in making the most of Azure resources to create and maintain scalable, cost-efficient, and secure solutions on the Microsoft Azure cloud.
-tags: 'azure, cloud, microsoft'
-cover_image: https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png
+description: Let's see the latest available k8s tools
+tags: 'azure, docker, kubernetes'
+cover_image: https://miro.medium.com/v2/resize:fit:608/1*XwnKb_efOFg5HtGeGjIGjg.png
 canonical_url: null
 id: 
 ---
-<!-- ---
-title: Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
-published: false
-description: Let's see the latest available k8s tools
-tags: 'azure, devops, kubernetes'
-cover_image: https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif
-canonical_url: null
-id: 
---- -->
 
 # Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+
 
 
 - [Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps](#seamless-integration-and-deployment-of-azure-data-factory-by-using-azure-devops)
