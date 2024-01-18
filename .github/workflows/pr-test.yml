@@ -16,9 +16,9 @@ jobs:
 
     - name: Check Markdown Files Format
       run: |
-        for file in $(git diff --name-only --diff-filter=AM origin/main...HEAD -- '*.md'); do
-          if ! head -n 10 "$file" | grep -qP '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: '.+'\ncover_image: http.+\ncanonical_url: null\nid: .*\n---'; then
+        while IFS= read -r file; do
+          if ! grep -Pzoq -- '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: .+\ncover_image: http.+\ncanonical_url: null\nid: .*\n---' "$file"; then
             echo "File $file does not meet the required format"
             exit 1
           fi
-        done
+        done < <(git diff --name-only --diff-filter=AM origin/main...HEAD -- '*.md')
