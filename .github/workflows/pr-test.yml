@@ -16,9 +16,10 @@ jobs:
 
     - name: Check Markdown Files Format
       run: |
-        while IFS= read -r file; do
-          if ! grep -Pzoq -- '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: .+\ncover_image: http.+\ncanonical_url: null\nid: .*\n---' "$file"; then
-            echo "File $file does not meet the required format"
+        IFS=$'\n'
+        for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
+          if ! grep -q -E '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: .+\ncover_image: .+\ncanonical_url: .+\nid: .+\n---' "$file"; then
+            echo "The file \"$file\" does not have the required Markdown header format."
             exit 1
           fi
-        done < <(git diff --name-only --diff-filter=AM origin/main...HEAD -- '*.md')
+        done
