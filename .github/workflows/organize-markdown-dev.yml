@@ -1,4 +1,4 @@
-name: Move Markdown on Merge
+name: Move Markdown on push to dev
 on:
     push:
         branches:
