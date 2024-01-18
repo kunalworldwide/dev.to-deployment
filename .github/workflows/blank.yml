@@ -1,36 +1,39 @@
 # This is a basic workflow to help you get started with Actions
 
-name: CI
+name: Move Markdown on Merge -dev
 
-# Controls when the workflow will run
 on:
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
-
-  # Allows you to run this workflow manually from the Actions tab
+    types: [closed]
+    branches:
+      - development
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    # The type of runner that the job will run on
+  move-markdown:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: development
+        fetch-depth: 0
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
+    - name: Move Markdown Files
+      run: |
+          mkdir -p _posts
+          for file in *.md; do
+            if [ "$file" != "README.md" ]; then
+              git mv "$file" "_posts/$file"
+            fi
+          done
 
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+
+    # Commit and push all changed files.
+    - name: GIT push to development
+      run: |
+        git config --global user.name github-actions-bot
+        git config --global user.email github-actions@github.com
+        git commit -a -m "Move Markdown files to _posts" || echo "No changes to commit"
+        git push
