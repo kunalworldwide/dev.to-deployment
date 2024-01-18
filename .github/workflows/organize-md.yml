@@ -1,0 +1,32 @@
+name: Move Markdown on Merge
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+      - main
+
+jobs:
+  move-markdown:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      with:
+        ref: main
+        fetch-depth: 0
+
+    - name: Move Markdown Files
+      run: |
+        mkdir -p _posts
+        for file in *.md; do
+          if [ "$file" != "README.md" ]; then
+            git mv "$file" "_posts/$file"
+          fi
+        done
+        git config user.name github-actions
+        git config user.email github-actions@github.com
+        git commit -m "Move Markdown files to _posts" || echo "No changes to commit"
+        git push origin main
