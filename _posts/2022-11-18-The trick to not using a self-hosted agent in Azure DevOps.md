@@ -3,9 +3,9 @@ title: The trick to not using a self-hosted agent in Azure DevOps
 published: false
 description: avoid using self-hosted agent to connect and deploy to private network.
 tags: 'azure, cicd, devops'
-cover_image: https://miro.medium.com/v2/resize:fit:700/0*abFuG6O6narmeqHG.png
+cover_image: 'https://miro.medium.com/v2/resize:fit:700/0*abFuG6O6narmeqHG.png'
 canonical_url: null
-id: 
+id: 1734102
 ---
 
 
