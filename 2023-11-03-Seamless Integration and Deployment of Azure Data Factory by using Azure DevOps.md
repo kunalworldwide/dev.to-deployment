@@ -1,122 +1,312 @@
----
-title: Mastering Kubernetes A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know
-published: false
-description: Let's see the latest available k8s tools
-tags: 'azure, docker, kubernetes'
-cover_image: https://miro.medium.com/v2/resize:fit:608/1*XwnKb_efOFg5HtGeGjIGjg.png
-canonical_url: null
-id: 
----
-
-# Mastering Kubernetes: A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know
-
+# Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
 
 
-![](https://miro.medium.com/v2/resize:fit:608/1*XwnKb_efOFg5HtGeGjIGjg.png)
-
-- [Mastering Kubernetes: A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know](#mastering-kubernetes-a-deep-dive-into-cluster-management-tools-every-devops-engineer-should-know)
-  - [1. Kustomizer](#1-kustomizer)
-  - [2. k9s](#2-k9s)
-  - [3. Kudo](#3-kudo)
-  - [4. node-problem-detector](#4-node-problem-detector)
-  - [5. k0s](#5-k0s)
-  - [6. Helm](#6-helm)
-  - [7. ClusterPedia](#7-clusterpedia)
-  - [8. KEDA](#8-keda)
-  - [9. kubectl snapshot](#9-kubectl-snapshot)
-  - [10. Cert-manager](#10-cert-manager)
-  - [11. Prometheus](#11-prometheus)
-  - [12. Metalk8s](#12-metalk8s)
-  - [13. Kube-ops-view](#13-kube-ops-view)
+- [Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps](#seamless-integration-and-deployment-of-azure-data-factory-by-using-azure-devops)
+  - [Introduction](#introduction)
+  - [Embracing Source Control in ADF](#embracing-source-control-in-adf)
+  - [Advantages of Git Integration with Azure Data Factory](#advantages-of-git-integration-with-azure-data-factory)
+  - [**Architecture Flow diagram**](#architecture-flow-diagram)
+  - [Connecting to a Git Repository](#connecting-to-a-git-repository)
+  - [Implementing the Pipeline Template](#implementing-the-pipeline-template)
 
 
-Kubernetes, often abbreviated as K8s, has revolutionized the world of container orchestration. As its popularity grows, so does the ecosystem around it, offering a myriad of tools designed to simplify, enhance, and optimize the Kubernetes experience. For DevOps engineers, understanding these tools is paramount. In this comprehensive guide, we’ll explore some of the most promising cluster management tools that can elevate your Kubernetes game.
+## Introduction
 
-## 1\. Kustomizer
+Azure Data Factory (ADF) offers a robust platform for data integration and transformation, and when combined with continuous integration and delivery (CI/CD), it becomes a powerhouse. CI/CD in ADF context is the seamless transition of data pipelines across different environments like development, testing, and production. ADF leverages Azure Resource Manager (ARM) templates to encapsulate the configurations of its entities, such as pipelines, datasets, and data flows. There are primarily two recommended ways to transition a data factory across environments:
 
-Kustomizer is not just another configuration management tool. It stands out by allowing Kubernetes native applications to be customized without the need for templates. This means you can manage variations of Kubernetes YAML configurations without diving into complex templating engines.
+1.  Leveraging Azure Pipelines for an automated deployment.
+2.  Manually uploading an ARM template through the Data Factory user interface integrated with Azure Resource Manager.
 
-[Learn more about Kustomizer](https://kubectl.docs.kubernetes.io/guides/introduction/kustomize/)
+## Embracing Source Control in ADF
 
-## 2\. k9s
+Azure Data Factory’s integration with ARM templates facilitates the deployment of pipelines. Notably, there’s a distinct ADF Publish branch and a collaboration branch.
 
-Imagine having a bird’s-eye view of your Kubernetes clusters right from your terminal. k9s offers a terminal-based UI that provides real-time insights into cluster activities and resources. It’s like having a dashboard but with the power of the command line.
+Steps for Integrating Source Control with Branching Strategy:
 
-[Explore k9s](https://k9scli.io/)
+1.  Initialize the Git Repository: Start by initializing a single Git repository. This repository will house multiple ADF configurations, each tailored for specific pipelines.
+2.  Branching Blueprint: Designate a unique branch for every ADF, which will act as a collaboration branch. This setup will lead to the creation of distinct folders under the `adf_publish` branch. It's crucial to have separate branches for development to allow individual feature development, testing, and deployment.Important to note that we may not use this branch as we will use automated ARM tempalte publishing methood.
+3.  Integrate Development Branches with Source Control: Only link the development branches with source control. This ensures continuous validation and checking of the code during its development phase. Keeping UAT/Production deployments separate ensures a clear demarcation between development and deployment phases.
+4.  Pipeline Deployment: Utilize the ARM templates produced by ADF to deploy your pipelines, ensuring a uniform deployment process.
+5.  Final Integration: Post thorough testing, merge the feature branches with the collaboration branch. The final version in the collaboration branch should be the one deployed to production.
 
-## 3\. Kudo
+## Advantages of Git Integration with Azure Data Factory
 
-Building Kubernetes Operators can be challenging. Enter KUDO — the Kubernetes Universal Declarative Operator. It’s an open-source toolkit that simplifies the creation of Operators using a declarative approach, making the management of stateful applications on Kubernetes a breeze.
+1\. **Enhanced Source Control:** As ADF tasks become increasingly critical, it’s essential to:
 
-[Discover Kudo](https://kudo.dev/)
+-   Seamlessly track and audit changes.
+-   Effortlessly revert unwanted modifications.
 
-## 4\. node-problem-detector
+2\. **Flexible Drafting:** Unlike direct authoring, which mandates validation for every save, Git integration allows:
 
-Ensuring the health of your nodes is crucial. The node-problem-detector tool identifies common node issues, bridging the gap between the kernel and cluster management layers. It’s like having a health check-up for your nodes.
+-   Drafting or partial saves.
+-   Incremental modifications without validation, ensuring only thoroughly tested changes are published.
 
-[Check out node-problem-detector](https://github.com/kubernetes/node-problem-detector)
+3\. **Collaborative Environment & Role-Based Access:** Git facilitates:
 
-## 5\. k0s
+-   Collaborative code reviews.
+-   Differentiated permissions, dictating who can edit via Git and who has publishing rights.
 
-In environments where resources are limited, such as edge computing or IoT, k0s shines. It’s a lightweight, certified Kubernetes distribution tailored for such scenarios, ensuring you don’t compromise on performance.
+4\. **Streamlined CI/CD Process:** Git aids in:
 
-[Dive into k0s](https://k0sproject.io/)
+-   Automating release pipelines upon changes.
+-   Customizing ARM template properties for cleaner configuration management.
 
-## 6\. Helm
+5\. **Boosted Performance:** ADFs integrated with Git are significantly faster, loading up to a whopping 10 times quicker due to efficient resource downloading.
 
-Helm is often dubbed the “package manager for Kubernetes.” It allows users to define, install, and upgrade even the most complex Kubernetes applications using charts, which are packages of pre-configured Kubernetes resources.
+It’s worth noting that direct authoring in the Azure Data Factory UI becomes disabled once a Git repository is integrated. However, modifications made via PowerShell or SDK are directly published to the Data Factory service, bypassing Git.
 
-[Discover Helm](https://helm.sh/)
+## **Architecture Flow diagram**
 
-## 7\. ClusterPedia
+![](https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif)
 
-Searching and managing resources across clusters can be daunting. ClusterPedia, a unified search platform for Kubernetes clusters, streamlines this process, making resource management efficient and hassle-free.
+## Connecting to a Git Repository
 
-[Learn about ClusterPedia](https://chat.openai.com/?model=gpt-4-plugins#) _(Note: Link to be updated when available)_
+Configuration using Management Hub:
 
-## 8\. KEDA
+-   Navigate to the management hub within the ADF UI.
+-   Under the Source control section, select Git configuration.
+-   If no repository is linked, click on Configure.
 
-Event-driven architectures are gaining traction. KEDA (Kubernetes-based Event-Driven Autoscaling) is a component that brings event-driven autoscaling to your Kubernetes applications, ensuring they scale based on real-time demand.
+When setting up Git in the Azure Portal, certain settings like project name and repository name need to be manually inputted.
 
-[Explore KEDA](https://keda.sh/)
+![](https://miro.medium.com/v2/resize:fit:700/1*f5Qo3S3JmR4vclpCLWMQWA.png)
 
-## 9\. kubectl snapshot
+**Azure Repos Settings:**
 
-Documentation and debugging are made easier with kubectl snapshot. This tool captures the current state of a Kubernetes cluster, providing a snapshot that can be analyzed or shared.
+The configuration pane will display various Azure Repos code repository settings. These settings are essential to apply the CI-CD template. For instance:
 
-[Discover kubectl snapshot](https://chat.openai.com/?model=gpt-4-plugins#) _(Note: Link to be updated when available)_
+-   Repository Type: Specifies the type of the Azure Repos code repository.
+-   Azure Active Directory: Your Azure AD tenant name.
+-   Azure Repos Organization: Your Azure Repos organization name.
+-   Project Name: Your Azure Repos project name.
+-   Repository Name: Your Azure Repos code repository name.
+-   Collaboration Branch: Your Azure Repos collaboration branch used for publishing.
+-   Publish Branch: The branch where ARM templates related to publishing are stored.
+-   Root Folder: Your root folder in your Azure Repos collaboration branch.
 
-## 10\. Cert-manager
+Ensure you enable the option in the management hub to include global parameters in the ARM template if you have declared any global parameters.
 
-Security is paramount. Cert-manager steps in as a native Kubernetes certificate management controller, automating the issuance and renewal of certificates from various sources, ensuring your applications remain secure.
+```yaml
+# Parameter Definitions: Allows configuration without diving deep into the script.
+parameters:
+- name: envTarget
+  displayName: 'Deployment Environment'
+  type: string
+  values:
+  - Stage
+  - Prod
+  
+- name: azureDFName
+  displayName: 'Azure Data Factory Identifier'
+  type: string
+  
+- name: gitADFPath
+  displayName: 'Git Path for ADF Publishing'
+  type: string
+  
+- name: azureRegion
+  displayName: 'Azure Deployment Region'
+  type: string
+  
+- name: azureResourceGroup
+  displayName: 'Resource Group in Azure'
+  type: string
+  
+- name: azureSubID
+  displayName: 'Azure Subscription Identifier'
+  type: string
+  
+- name: azureRMConnectionName
+  displayName: 'Azure Resource Manager Connection Identifier'
+  type: string
 
-[Check out Cert-manager](https://cert-manager.io/)
+- name: sourceDFName
+  displayName: 'Source Data Factory for ARM Template'
+  type: string
 
-## 11\. Prometheus
+- name: targetDFName
+  displayName: 'Target Data Factory for Deployment'
+  type: string
 
-Monitoring is crucial in a Kubernetes environment. Prometheus, an open-source monitoring and alerting toolkit, integrates seamlessly with Kubernetes, providing insights into your clusters and applications.
+- name: modifyGlobalParams
+  displayName: 'Modify Global Parameters'
+  type: boolean
+  default: false
 
-[Learn more about Prometheus](https://prometheus.io/)
+# Build Phase: Validate and Create ARM templates for Data Factory using npm.
+stages:
+- stage: Construct
+  displayName: 'Compile and Confirm'
+  jobs:
+  - job: CompileAndCheck
+    displayName: 'Compile and Confirm Azure Data Factory'
+    pool:
+      vmImage: 'ubuntu-latest'
+      
+    steps:
+      # Set up Node.js for npm tasks.
+      - task: NodeTool@0
+        inputs:
+          versionSpec: '14.x'
+        displayName: 'Set up Node.js'
+      
+      # Set up required npm packages for Data Factory.
+      - task: Npm@1
+        inputs:
+          command: 'install'
+          verbose: true
+          workingDir: '$(Build.Repository.LocalPath)/data-factory/'
+        displayName: 'Set up npm modules'
+      
+      # Confirm Data Factory setup.
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          workingDir: '$(Build.Repository.LocalPath)/data-factory/'
+          customCommand: 'run build validate $(Build.Repository.LocalPath)/data-factory /subscriptions/$(azureSubID)/resourceGroups/$(azureResourceGroup)/providers/Microsoft.DataFactory/factories/$(azureDFName)'
+        displayName: 'Confirm Data Factory Setup'
+      
+      # Create ARM template for Data Factory.
+      - task: Npm@1
+        inputs:
+          command: 'custom'
+          workingDir: '$(Build.Repository.LocalPath)/data-factory/'
+          customCommand: 'run build export $(Build.Repository.LocalPath)/data-factory /subscriptions/$(azureSubID)/resourceGroups/$(azureResourceGroup)/providers/Microsoft.DataFactory/factories/$(azureDFName) "ArmTemplate"'
+        displayName: 'Create ARM template'
+      
+      # Share the created ARM template for later stages.
+      - task: PublishPipelineArtifact@1
+        inputs:
+          targetPath: '$(Build.Repository.LocalPath)/data-factory/ArmTemplate'
+          artifact: 'ArmTemplateArtifact'
+          publishLocation: 'pipeline'
+        displayName: 'Share ARM template'
 
-## 12\. Metalk8s
+# Deployment Phase: Deploy the Data Factory using ARM template.
+- stage: DeployPhase
+  jobs:
+  - deployment: DeployToTarget
+    displayName: 'Deploy to ${{ parameters.envTarget }} | ADF: ${{ parameters.azureDFName }}'
+    dependsOn: Construct
+    condition: succeeded()
+    environment: ${{ parameters.envTarget }}
+    pool:
+      vmImage: 'ubuntu-latest'
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+            # Skip repo checkout for faster deployment.
+            - checkout: none
+            
+            # Retrieve the ARM template from the build phase.
+            - task: DownloadPipelineArtifact@2
+              inputs:
+                buildType: 'current'
+                artifactName: 'ArmTemplateArtifact'
+                targetPath: '$(Pipeline.Workspace)'
+              displayName: "Retrieve ARM template"
 
-For those focusing on long-term on-prem deployments, especially on metal machines, Metalk8s is a go-to Kubernetes distribution. It’s opinionated, ensuring stability and performance in such specific scenarios.
+            # Optionally modify global parameters if needed.
+            - ${{ if eq(parameters.modifyGlobalParams, true) }}:
+              - task: AzurePowerShell@5
+                displayName: '(Optional) Modify Global Parameters'
+                inputs:
+                  azureSubscription: ${{ parameters.azureRMConnectionName }}
+                  azurePowerShellVersion: 'LatestVersion'
+                  ScriptType: 'FilePath'
+                  ScriptPath: '$(Pipeline.Workspace)/GlobalParametersUpdateScript.ps1'
+                  ScriptArguments: '-globalParametersFilePath "$(Pipeline.Workspace)/*_GlobalParameters.json" -resourceGroupName "${{ parameters.azureResourceGroup }}" -dataFactoryName "${{ parameters.sourceDFName }}"'
 
-[Dive into Metalk8s](https://metal-k8s.readthedocs.io/)
+            # Deactivate ADF Triggers after deployment.
+            - task: toggle-adf-trigger@2
+              inputs:
+                azureSubscription: ${{ parameters.azureRMConnectionName }}
+                ResourceGroupName: ${{ parameters.azureResourceGroup }}
+                DatafactoryName: ${{ parameters.targetDFName }}
+                TriggerStatus: 'stop'
 
-## 13\. Kube-ops-view
+            # Deploy using the ARM template. Override source ADF name with target ADF name.
+            - task: AzureResourceManagerTemplateDeployment@3
+              displayName: 'Deploy using ARM Template'
+              inputs:
+                azureResourceManagerConnection: ${{ parameters.azureRMConnectionName }}
+                subscriptionId: ${{ parameters.azureSubID }}
+                resourceGroupName: ${{ parameters.azureResourceGroup }}
+                location: ${{ parameters.azureRegion }}
+                csmFile: '$(Pipeline.Workspace)/ARMTemplateForFactory.json'
+                csmParametersFile: '$(Pipeline.Workspace)/ARMTemplateParametersForFactory.json'
+                overrideParameters: '-factoryName "${{ parameters.targetDFName }}"'
+              
+            # Activate ADF Triggers after deployment.
+            - task: toggle-adf-trigger@2
+              inputs:
+                azureSubscription: ${{ parameters.azureRMConnectionName }}
+                ResourceGroupName: ${{ parameters.azureResourceGroup }}
+                DatafactoryName: ${{ parameters.targetDFName }}
+                TriggerStatus: 'start'
+```
 
-Visual representation can simplify complex operations. Kube-ops-view offers a read-only system dashboard for multiple K8s clusters, providing a graphical overview of cluster operations.
+## Implementing the Pipeline Template
 
-[Explore Kube-ops-view](https://github.com/hjacobs/kube-ops-view)
+This guide provides a comprehensive walkthrough on setting up and utilizing the Azure Data Factory CI/CD pipeline as defined in the YAML file. The pipeline streamlines the build and deployment of ADF artifacts to designated environments.
 
-Conclusion: The Kubernetes ecosystem is vast and ever-evolving. For DevOps engineers, staying updated with the right tools can make the difference between a smoothly running cluster and a chaotic environment. This guide provides a starting point, but always ensure to evaluate tools based on your unique needs.
+**Prerequisites:**
 
-**_Comment down the tools you use I shall be updating the list whenever I find something cool.  
-keep it followed !!_**
+-   Azure Data Factory Instance: An active ADF instance in Azure.
+-   Azure DevOps: The YAML is tailored for Azure DevOps. Ensure you have an active Azure DevOps organization and project.
+-   Azure DevOps Agent: The pipeline employs the `ubuntu-latest` VM image.
+-   Node.js: The initial stage requires Node.js.
+-   Azure Subscription: Necessary permissions on your Azure subscription are required.
+
+To download necessery package for the npm, keep package.json file in the parent directory
+
+```npm
+{
+    "scripts":{
+        "build":"node node_modules/@microsoft/azure-data-factory-utilities/lib/index"
+    },
+    "dependencies":{
+        "@microsoft/azure-data-factory-utilities":"^1.0.0"
+    }
+}
+```
+
+**Repository Structure:**
+
+The ADF code should be housed in a folder named `data-factory-directory` at the root of your repository.
+
+**Setup & Execution:**
+
+1.  Azure Service Connection: Establish a service connection in Azure DevOps linked to your Azure subscription.
+2.  GlobalParametersUpdateScript.ps1: If the `modifyGlobalParams` flag is set to true, ensure a PowerShell script named `GlobalParamsScript.ps1` is present at the root of your repository.
+3.  Using the Pipeline: Upload the YAML file to your Azure DevOps repository, create a new pipeline, fill in the parameters, trigger the pipeline, and monitor the build and deployment.
+
+**Running the Pipeline**
+
+Push some changes to `development`branch. and the pipeline will get triggered automatically
+
+![](https://miro.medium.com/v2/resize:fit:378/1*Mnhcym8CgT0JHrUtyJ3Gyg.png)
+
+Once the pipeline finished see the artifact that got published.
+
+![](https://miro.medium.com/v2/resize:fit:251/1*81EyoKuXbjacpHwoUPn--Q.png)
+
+Similarly once the pipeline gets approval for deployment, it will deploy the updated template to production,
+
+![](https://miro.medium.com/v2/resize:fit:328/1*1YrpZ6Xhv8BGBuERjN1k2g.png)
+
+**Modifications & Best Practices:**
+
+-   Global Parameter Update: Adjust the logic in the optional global parameter update task if needed.
+-   Additional Tasks: Insert any extra tasks within the steps section of the stages.
+-   Permissions: Not every team member should have update permissions. Implement a system where only a select few can publish to the Data Factory.
+-   Using Azure Key Vault: For security, store connection strings or passwords in Azure Key Vault or use managed identity authentication for ADF Linked Services.
+
+In conclusion, integrating CI/CD with Azure Data Factory not only streamlines the deployment process but also enhances collaboration, auditing, and overall efficiency. With the right setup and best practices, teams can ensure seamless and error-free deployments.
 
 ## Read my blogs : 
  
