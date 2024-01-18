@@ -13,7 +13,6 @@ id:
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
 
-
 - [Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps](#seamless-integration-and-deployment-of-azure-data-factory-by-using-azure-devops)
   - [Introduction](#introduction)
   - [Embracing Source Control in ADF](#embracing-source-control-in-adf)
