@@ -1,4 +1,4 @@
-name: Move Markdown on Merge
+name: Move Markdown on Merge -dev
 
 on:
   pull_request:
