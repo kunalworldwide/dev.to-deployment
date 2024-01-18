@@ -3,9 +3,9 @@ title: Mastering Private Repositories in Enterprise with GitHub
 published: false
 description: How to handle private repo in github?
 tags: 'azure, github, git'
-cover_image: https://miro.medium.com/v2/resize:fit:700/1*o_r7JdrqQTcB0kkb3AF1UA.jpeg
+cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*o_r7JdrqQTcB0kkb3AF1UA.jpeg'
 canonical_url: null
-id: 
+id: 1734108
 ---
 
 
