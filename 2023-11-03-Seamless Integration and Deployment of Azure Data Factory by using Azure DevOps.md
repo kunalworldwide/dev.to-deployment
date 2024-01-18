@@ -8,7 +8,6 @@ canonical_url: null
 id: 
 ---
 
-
 # Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
