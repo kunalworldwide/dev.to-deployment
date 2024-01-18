@@ -7,7 +7,6 @@ cover_image: https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png
 canonical_url: null
 id: 
 ---
-
 <!-- ---
 title: Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 published: false
