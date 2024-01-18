@@ -1,0 +1,24 @@
+name: Pull Request check of markdown files
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  markdown-check:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Check Markdown Files Format
+      run: |
+        for file in $(git diff --name-only --diff-filter=AM origin/main...HEAD -- '*.md'); do
+          if ! head -n 10 "$file" | grep -qP '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: '.+'\ncover_image: http.+\ncanonical_url: null\nid: .*\n---'; then
+            echo "File $file does not meet the required format"
+            exit 1
+          fi
+        done
