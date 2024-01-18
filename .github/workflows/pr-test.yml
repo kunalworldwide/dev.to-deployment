@@ -14,12 +14,55 @@ jobs:
       with:
         fetch-depth: 0
 
-    - name: Check Markdown Files Format
+    - name: Check Markdown File Headers
       run: |
-        IFS=$'\n'
-        for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
-          if ! grep -q -E '---\ntitle: .+\npublished: (true|false)\ndescription: .+\ntags: .+\ncover_image: .+\ncanonical_url: .+\nid: .+\n---' "$file"; then
-            echo "The file \"$file\" does not have the required Markdown header format."
-            exit 1
+        # Define function to check headers
+        function check_markdown_header {
+          local file=$1
+          local missing_component=false
+
+          # Header components to check
+          local components=(
+            "^---$"
+            "^title: .+"
+            "^published: .+"
+            "^description: .+"
+            "^tags: .+"
+            "^cover_image: .+"
+            "^canonical_url: .+"
+            "^id: .*"
+            "^---$"
+          )
+
+          for component in "${components[@]}"; do
+            if ! grep -Pq "$component" "$file"; then
+              echo "Missing or incorrect in \"$file\": $component"
+              missing_component=true
+            fi
+          done
+
+          if [ "$missing_component" = true ]; then
+            return 1
+          else
+            return 0
           fi
+        }
+
+        # Change the Internal Field Separator to newline
+        IFS=$'\n'
+
+        # Variable to track errors
+        error=0
+
+        # Loop through all markdown files in the PR
+        for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
+          check_markdown_header "$file" || error=$((error+1))
         done
+
+        # Fail the job if any errors were found
+        if [ $error -ne 0 ]; then
+          echo "There are $error files without the required header format."
+          exit 1
+        else
+          echo "All Markdown files have the required header format."
+        fi
