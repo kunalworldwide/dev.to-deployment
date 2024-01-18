@@ -26,8 +26,14 @@ jobs:
               git mv "$file" "_posts/$file"
             fi
           done
-          git config user.name github-actions
-          git config user.email github-actions@github.com
-          git commit -m "Move Markdown files to _posts" || echo "No changes to commit"
-          git push https://${{ secrets.PERSONAL_ACCESS_TOKEN }}:x-oauth-basic@github.com/kunalworldwide/dev.to-deployment.git main
-  
+
+
+    # Commit and push all changed files.
+    - name: GIT push to main
+      # Only run on main branch push (e.g. after pull request merge).
+      if: github.event_name == 'push'
+      run: |
+        git config --global user.name github-actions-bot
+        git config --global user.email github-actions@github.com
+        git commit -a -m "Move Markdown files to _posts" || echo "No changes to commit"
+        git push
