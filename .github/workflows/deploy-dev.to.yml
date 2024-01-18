@@ -12,13 +12,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
-
-    - name: List files
-      run: ls -l
-    
-    - name: pwd
-      run: pwd
+    - uses: actions/checkout@v4
 
     - name: Publish articles on dev.to
       uses: sinedied/publish-devto@v2
