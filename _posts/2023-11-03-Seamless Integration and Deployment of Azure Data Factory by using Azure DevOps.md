@@ -3,9 +3,9 @@ title: Seamless Integration and Deployment of Azure Data Factory by using Azure 
 published: false
 description: deploy ADF from dev to prod at ease
 tags: 'azure, cloud, devops'
-cover_image: https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif
+cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif'
 canonical_url: null
-id: 
+id: 1734080
 ---
 
 # Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
