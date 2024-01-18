@@ -32,6 +32,7 @@ id:
 
 Azure best practices assist businesses in making the most of Azure resources to create and maintain scalable, cost-efficient, and secure solutions on the Microsoft Azure cloud. Having the correct Azure best practices can make or ruin a firm because Azure serves as the foundation of many modern organizations. I’ve covered the fundamental best practices that every Azure administrator needs to be aware of in this document. I’ve also provided advice on how to create a secure, reliable, and effective Azure infrastructure. These best practices must be followed in tandem because none of them by themselves can adequately secure the systems. You must select the best security alternatives based on your surroundings and demands, as is always the case.
 
+
 ## Security:
 
 the most important thing before anything else is security, The recommendations below can help assure more robust Azure security, but they cannot serve as a complete substitute. The top practices that I believe will help you strengthen and safeguard your Azure are listed below.
