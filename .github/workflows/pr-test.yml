@@ -15,6 +15,7 @@ jobs:
         fetch-depth: 0
 
     - name: Check Markdown File Headers
+      working-directory: '_posts/'
       run: |
         # Define function to check headers
         function check_markdown_header {
