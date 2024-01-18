@@ -1,4 +1,14 @@
 ---
+title: Mastering Kubernetes A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know
+published: false
+description: Let's see the latest available k8s tools
+tags: 'azure, docker, kubernetes'
+cover_image: https://miro.medium.com/v2/resize:fit:608/1*XwnKb_efOFg5HtGeGjIGjg.png
+canonical_url: null
+id: 
+---
+
+<!-- ---
 title: Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 published: false
 description: Let's see the latest available k8s tools
@@ -6,7 +16,7 @@ tags: 'azure, devops, kubernetes'
 cover_image: https://miro.medium.com/v2/resize:fit:700/1*z3Maq-fWswhWLoPDNva7fA.gif
 canonical_url: null
 id: 
----
+--- -->
 
 # Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 
