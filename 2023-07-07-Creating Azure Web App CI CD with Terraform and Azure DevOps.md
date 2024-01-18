@@ -1,3 +1,13 @@
+---
+title: Creating Azure Web App CI/CD with Terraform and Azure DevOps
+published: false
+description: Create a ready to use Azure webapp with terraform and Azure DevOps CICD
+tags: 'azure, terraform, devops'
+cover_image: https://miro.medium.com/v2/resize:fit:700/1*hj3ezml_2bs9uDUssU4oLQ.png
+canonical_url: null
+id: 
+---
+
 # Step-by-Step Guide: Creating Azure Web App CI/CD with Terraform and Azure DevOps
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
