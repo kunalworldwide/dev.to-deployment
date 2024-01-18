@@ -30,8 +30,6 @@ jobs:
 
     # Commit and push all changed files.
     - name: GIT push to main
-      # Only run on main branch push (e.g. after pull request merge).
-      if: github.event_name == 'push'
       run: |
         git config --global user.name github-actions-bot
         git config --global user.email github-actions@github.com
