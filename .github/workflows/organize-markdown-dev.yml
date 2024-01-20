@@ -1,37 +1,44 @@
-name: Move Markdown on push to dev
+name: Process Markdown on push to ingestion-post
 on:
-    push:
-        branches:
-        - development
-        paths-ignore:
-        - '_posts/**'
+  push:
+    branches:
+      - ingestion-post
 
-    workflow_dispatch:
+  workflow_dispatch:
+
 jobs:
-  move-markdown:
+  process-markdown:
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: development
+        ref: ingestion-post
         fetch-depth: 0
 
-    - name: Move Markdown Files
+    - name: Move New Markdown Files
       run: |
           mkdir -p _posts
           for file in *.md; do
-            if [ "$file" != "README.md" ]; then
+            if [ "$file" != "README.md" ] && [ ! -f "_posts/$file" ]; then
               git mv "$file" "_posts/$file"
             fi
           done
 
+    - name: Delete Remaining Markdown Files
+      run: |
+          for file in *.md; do
+            if [ "$file" != "README.md" ]; then
+              git rm "$file"
+            fi
+          done
 
-    # Commit and push all changed files.
-    - name: GIT push to development
+    # Commit and push all changes.
+    - name: GIT push changes
       run: |
         git config --global user.name github-actions-bot
         git config --global user.email github-actions@github.com
-        git commit -a -m "Move Markdown files to _posts" || echo "No changes to commit"
+        git commit -a -m "Process and clean Markdown files" || echo "No changes to commit"
         git push
+
