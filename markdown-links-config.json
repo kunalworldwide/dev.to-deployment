@@ -1,49 +1,20 @@
-// {
-//     "retryCount": 12,
-//     "fallbackRetryDelay": "60s",
-//     "timeout": "30s",
-//     "aliveStatusCodes": [429, 200, 403, 999, 400],
-//     "ignorePatterns": [
-//         {
-//             "pattern": "^https?://haylink.me"
-//         },
-//         {
-//             "pattern": "^https?://twitter.com/"
-//         },
-//         {
-//           "pattern": "^https?://x.com/"
-//         },
-//         {
-//             "pattern": "^https?://linkedin.com/"
-//         }
-//       ]
-//   }
-
 {
     "retryCount": 12,
     "fallbackRetryDelay": "60s",
     "timeout": "30s",
-    "aliveStatusCodes": [429, 200, 403, 0],
-    "replacementPatterns": [
-      {
-        "pattern": "^/",
-        "replacement": "https://use.ink/"
-      }
-    ],
-    "httpHeaders": [
-      {
-        "urls": ["https://crates.io"],
-        "headers": {
-          "Accept": "text/html"
-        }
-      }
-    ],
-    "ignorePatterns": [
-      {
-        "pattern": "^https?://twitter.com"
-      },
-      {
-        "pattern": "^https?://x.com"
-      }
-    ]
+    "aliveStatusCodes": [429, 200, 403, 999, 400]
+    // "ignorePatterns": [
+    //     {
+    //         "pattern": "^https?://haylink.me"
+    //     },
+    //     {
+    //         "pattern": "^https?://twitter.com/"
+    //     },
+    //     {
+    //       "pattern": "^https?://x.com/"
+    //     },
+    //     {
+    //         "pattern": "^https?://linkedin.com/"
+    //     }
+    //   ]
   }
