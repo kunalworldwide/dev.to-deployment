@@ -1,14 +1,15 @@
-name: Move Markdown on push to dev
+name: Move and Clean Markdown on PR merge to dev
 on:
-    push:
-        branches:
-        - development
-        paths-ignore:
-        - '_posts/**'
+  pull_request:
+    branches:
+      - development
+    types: [closed]
 
-    workflow_dispatch:
+  workflow_dispatch:
+
 jobs:
-  move-markdown:
+  process-markdown:
+    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
@@ -18,20 +19,27 @@ jobs:
         ref: development
         fetch-depth: 0
 
-    - name: Move Markdown Files
+    - name: Move New Markdown Files
       run: |
           mkdir -p _posts
           for file in *.md; do
-            if [ "$file" != "README.md" ]; then
+            if [ "$file" != "README.md" ] && [ ! -f "_posts/$file" ]; then
               git mv "$file" "_posts/$file"
             fi
           done
 
+    - name: Delete Remaining Markdown Files
+      run: |
+          for file in *.md; do
+            if [ "$file" != "README.md" ]; then
+              git rm "$file"
+            fi
+          done
 
-    # Commit and push all changed files.
+    # Commit and push all changes.
     - name: GIT push to development
       run: |
         git config --global user.name github-actions-bot
         git config --global user.email github-actions@github.com
-        git commit -a -m "Move Markdown files to _posts" || echo "No changes to commit"
+        git commit -a -m "Process Markdown files" || echo "No changes to commit"
         git push
