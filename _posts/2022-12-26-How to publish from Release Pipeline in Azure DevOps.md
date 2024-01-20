@@ -10,7 +10,11 @@ id: 1734117
 
 # How to publish from Release Pipeline in Azure DevOps
 
+<!-- markdown-link-check-disable -->
+
 [![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
+<!-- markdown-link-check-disable -->
 
 
 

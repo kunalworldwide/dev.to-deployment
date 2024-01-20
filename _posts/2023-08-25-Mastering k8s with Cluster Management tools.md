@@ -11,7 +11,11 @@ id: 1734109
 # Mastering Kubernetes: A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know
 
 
+<!-- markdown-link-check-disable -->
+
 [![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
+<!-- markdown-link-check-disable -->
 
 
 
