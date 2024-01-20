@@ -35,6 +35,9 @@ jobs:
         uses: gaurav-nelson/github-action-markdown-link-check@v1
 
   markdown-header-check:
+    defaults:
+      run:
+        working-directory: _posts
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -42,7 +45,7 @@ jobs:
           fetch-depth: 0
 
       - name: Check Markdown File Headers
-        working-directory: '_posts/'
+        #working-directory: '_posts/'
         run: |
           function check_markdown_header {
               local file=$1
