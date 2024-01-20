@@ -10,7 +10,12 @@ id: 1734110
 
 # COST ESTIMATION FOR INFRASTRUCTURE
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+<!-- markdown-link-check-disable -->
+
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
+<!-- markdown-link-check-disable -->
+
 
 
 - [COST ESTIMATION FOR INFRASTRUCTURE](#cost-estimation-for-infrastructure)
@@ -156,7 +161,7 @@ Infracost is a tool that allows users to perform cost analysis on their infrastr
 
 ü Install the infracost CLI tool: Infracost can be installed as a standalone CLI tool or as a Terraform plugin. To install the CLI tool, you can use the following command:
 
-curl -sfL [https://raw.githubusercontent.com/infracost/infracost/stable/scripts/install.sh](https://raw.githubusercontent.com/infracost/infracost/stable/scripts/install.sh) | sh
+curl -sfL [https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh](https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh) | sh
 
 ü Initialize infracost: Once you have installed the infracost CLI tool, you can initialize it by running the following command in your Terraform directory:
 
@@ -225,9 +230,10 @@ Apart from all Infracost supports multiple CI/CD platforms shown below,
 ## 4.1.1 Installing extension
 
 ü Go to your organization setting page in Azure Devops
+```
+https://dev.azure.com/{org\_name}/\_settings/extensions
 
-[https://dev.azure.com/{org\_name}/\_settings/extensions?tab=installed](https://dev.azure.com/%7Borg_name%7D/_settings/extensions?tab=installed)
-
+```
 ü Go to the marketplace link and install Infracost extension
 
 [https://marketplace.visualstudio.com/items?itemName=Infracost.infracost-tasks](https://marketplace.visualstudio.com/items?itemName=Infracost.infracost-tasks)
