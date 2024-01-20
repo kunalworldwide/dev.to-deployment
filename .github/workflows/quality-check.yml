@@ -36,20 +36,22 @@ jobs:
 
   markdown-header-check:
     runs-on: ubuntu-latest
-    defaults:
-        run:
-          working-directory: _posts
-    steps:        
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+        fetch-depth: 0
+
       - name: Check Markdown File Headers
-        # working-directory: '_posts/'
+        working-directory: '_posts/'
         run: |
             # Define function to check headers
             function check_markdown_header {
-            local file=$1
-            local missing_component=false
+                local file=$1
+                local missing_component=false
 
-            # Header components to check
-            local components=(
+                # Header components to check
+                local components=(
                 "^---$"
                 "^title: .+"
                 "^published: .+"
@@ -59,20 +61,20 @@ jobs:
                 "^canonical_url: .+"
                 "^id: .*"
                 "^---$"
-            )
+                )
 
-            for component in "${components[@]}"; do
+                for component in "${components[@]}"; do
                 if ! grep -Pq "$component" "$file"; then
-                echo "Missing or incorrect in \"$file\": $component"
-                missing_component=true
+                    echo "Missing or incorrect in \"$file\": $component"
+                    missing_component=true
                 fi
-            done
+                done
 
-            if [ "$missing_component" = true ]; then
+                if [ "$missing_component" = true ]; then
                 return 1
-            else
+                else
                 return 0
-            fi
+                fi
             }
 
             # Change the Internal Field Separator to newline
@@ -83,15 +85,15 @@ jobs:
 
             # Loop through all markdown files in the PR
             for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
-            check_markdown_header "$file" || error=$((error+1))
+                check_markdown_header "$file" || error=$((error+1))
             done
 
             # Fail the job if any errors were found
             if [ $error -ne 0 ]; then
-            echo "There are $error files without the required header format."
-            exit 1
+                echo "There are $error files without the required header format."
+                exit 1
             else
-            echo "All Markdown files have the required header format."
+                echo "All Markdown files have the required header format."
             fi
 
 #   spell-check:
