@@ -36,9 +36,12 @@ jobs:
 
   markdown-header-check:
     runs-on: ubuntu-latest
+    defaults:
+        run:
+          working-directory: _posts
     steps:        
       - name: Check Markdown File Headers
-        working-directory: '_posts/'
+        # working-directory: '_posts/'
         run: |
             # Define function to check headers
             function check_markdown_header {
