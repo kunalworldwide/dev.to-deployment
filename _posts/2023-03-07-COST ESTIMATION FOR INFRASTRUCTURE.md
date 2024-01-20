@@ -225,9 +225,10 @@ Apart from all Infracost supports multiple CI/CD platforms shown below,
 ## 4.1.1 Installing extension
 
 ü Go to your organization setting page in Azure Devops
+```
+https://dev.azure.com/{org\_name}/\_settings/extensions
 
-[https://dev.azure.com/{org\_name}/\_settings/extensions?tab=installed](https://dev.azure.com/%7Borg_name%7D/_settings/extensions?tab=installed)
-
+```
 ü Go to the marketplace link and install Infracost extension
 
 [https://marketplace.visualstudio.com/items?itemName=Infracost.infracost-tasks](https://marketplace.visualstudio.com/items?itemName=Infracost.infracost-tasks)
