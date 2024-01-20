@@ -74,7 +74,7 @@ jobs:
                 if [ "$missing_component" = true ]; then
                     return 1
                 else
-                    echo "[✔] $file - All header components present"
+                    echo "[✅] $file - All header components present"
                     return 0
                 fi
             }
@@ -95,10 +95,10 @@ jobs:
             # Output the results
             echo "$total_files file(s) checked."
             if [ $error -ne 0 ]; then
-                echo "There are files without the required header format."
+                echo "There are files without the required header format.🥺👎"
                 exit 1
             else
-                echo "All Markdown files have the required header format."
+                echo "All Markdown files have the required header format.🥳🎉"
             fi
         shell: bash
 
