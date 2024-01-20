@@ -156,7 +156,7 @@ Infracost is a tool that allows users to perform cost analysis on their infrastr
 
 ü Install the infracost CLI tool: Infracost can be installed as a standalone CLI tool or as a Terraform plugin. To install the CLI tool, you can use the following command:
 
-curl -sfL [https://raw.githubusercontent.com/infracost/infracost/stable/scripts/install.sh](https://raw.githubusercontent.com/infracost/infracost/stable/scripts/install.sh) | sh
+curl -sfL [https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh](https://raw.githubusercontent.com/infracost/infracost/master/scripts/install.sh) | sh
 
 ü Initialize infracost: Once you have installed the infracost CLI tool, you can initialize it by running the following command in your Terraform directory:
 

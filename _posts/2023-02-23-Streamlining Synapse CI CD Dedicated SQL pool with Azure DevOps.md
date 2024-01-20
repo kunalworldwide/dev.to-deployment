@@ -212,7 +212,7 @@ steps:
     azureSubscription: 'syn-sp'
     ResourceGroupName: 'synapseQA-RG'
     TargetWorkspaceName: 'synapse-qa'
-    OverrideArmParameters: '-LS_AKV_QA_properties_typeProperties_baseUrl https://synapse-qa.vault.azure.net/'
+    OverrideArmParameters: '-LS_AKV_QA_properties_typeProperties_baseUrl <Synapse QA AKV URL>'
     FailOnMissingOverrides: true
 ```
 This is a YAML code snippet for deploying a Synapse workspace using the Synapse Workspace Deployment task in Azure DevOps. The code contains the following steps:
@@ -222,7 +222,7 @@ This is a YAML code snippet for deploying a Synapse workspace using the Synapse 
 3.  The Azure subscription to be used for the deployment is specified as ‘syn-sp’.
 4.  The resource group name where the Synapse workspace will be deployed is set to ‘synapseQA-RG’.
 5.  The target Synapse workspace name is set to ‘synapse-qa’.
-6.  The override ARM parameters are specified using the parameter name and the new value. In this case, the parameter name is ‘-LS\_AKV\_QA\_properties\_typeProperties\_baseUrl’ and the new value is ‘[https://synapse-qa.vault.azure.net/](https://synapse-qa.vault.azure.net/)'.
+6.  The override ARM parameters are specified using the parameter name and the new value. In this case, the parameter name is ‘-LS\_AKV\_QA\_properties\_typeProperties\_baseUrl’ and the new value is 'QA-AKV-URL'.
 7.  The ‘FailOnMissingOverrides’ option is set to true, which means that the deployment will fail if any of the specified override parameters are not found.
 
 In summary, this code snippet deploys a Synapse workspace to the specified Azure subscription, resource group, and Synapse workspace name. The override ARM parameters allow you to customize the deployment settings for the workspace.
