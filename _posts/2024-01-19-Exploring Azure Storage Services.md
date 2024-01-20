@@ -12,12 +12,11 @@ id:
 
 Azure, Microsoft's cloud computing service, offers a range of storage solutions designed to meet the diverse needs of modern businesses. In this guide, we'll delve into the various Azure storage services, exploring their unique features and use cases. Whether you're a developer, a data scientist, or an IT professional, understanding these services can enhance your cloud strategy.
 
-<!-- markdown-link-check-disable -->
-
-[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
 <!-- markdown-link-check-disable -->
-
+Reach at : https://heylink.me/kunaldas
+<!-- markdown-link-check-enable -->
 ---
 
 ## Table of Contents
