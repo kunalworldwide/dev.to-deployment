@@ -191,11 +191,20 @@ Credit :
 
 
 ## Read my blogs:
-[![Medium](https://i.imgur.com/TgYYM9w.png)](https://kunaldaskd.medium.com)
-[![DEV](https://i.imgur.com/bp3qHWb.png)](https://dev.to/kunaldas)
-[![Hashnode](https://i.imgur.com/iwZwo2S.png)](https://kunaldas.hashnode.dev)
+
+<a href="https://kunaldaskd.medium.com">
+    <img src="https://i.imgur.com/TgYYM9w.png" alt="Medium Logo" height="20" style="margin-right: 10px;"/>
+</a>
+<a href="https://dev.to/kunaldas">
+    <img src="https://i.imgur.com/bp3qHWb.png" alt="Dev.to Logo" height="20" style="margin-right: 10px;"/>
+</a>
+<a href="https://kunaldas.hashnode.dev">
+    <img src="https://i.imgur.com/iwZwo2S.png" alt="Hashnode Logo" height="20"/>
+</a>
 
 ## Connect with Me:
-[![x](https://i.imgur.com/VaorXDP.png)](https://x.com/kunald_official)
-[![LinkedIn](https://i.imgur.com/ktIHVxm.png)](https://linkedin.com/in/kunaldaskd)
 
+<p align="left">
+<a href="https://twitter.com/kunald_official" target="blank"><img align="center" src="https://i.imgur.com/VaorXDP.png" alt="kunald_official" height="30" width="40" style="margin-right: 10px;"/></a>
+<a href="https://linkedin.com/in/kunaldaskd" target="blank"><img align="center" src="https://i.imgur.com/ktIHVxm.png" alt="kunaldaskd" height="30" width="40"/></a>
+</p>
