@@ -34,67 +34,67 @@ jobs:
       - name: Markdown Link Check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
 
-    markdown-header-check:
-      runs-on: ubuntu-latest
-      defaults:
-        run:
-          working-directory: _posts
-      steps:
-        - uses: actions/checkout@v4
-          with:
-            fetch-depth: 0
-  
-        - name: Check Markdown File Headers
-          run: |
-            function check_markdown_header {
-                local file=$1
-                local missing_component=false
-  
-                local components=(
-                    "^---$"
-                    "^title:.*"
-                    "^published:.*"
-                    "^description:.*"
-                    "^tags:.*"
-                    "^cover_image:.*"
-                    "^canonical_url:.*"
-                    "^id:.*"
-                    "^---$"
-                )
-  
-                echo "Checking file: $file"
-                for component in "${components[@]}"; do
-                    if ! grep -Pq "$component" "$file"; then
-                        echo "[❌] $file - Missing header component: $component"
-                        missing_component=true
-                    fi
-                done
-  
-                if [ "$missing_component" = true ]; then
-                    return 1
-                else
-                    echo "[✔] $file - All header components present"
-                    return 0
-                fi
-            }
-  
-            IFS=$'\n'
-            error=0
-            total_files=0
-  
-            for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
-                check_markdown_header "$file" || error=$((error+1))
-                total_files=$((total_files+1))
-            done
-  
-            echo "$total_files file(s) checked."
-            if [ $error -ne 0 ]; then
-                echo "There are files without the required header format."
-                exit 1
-            else
-                echo "All Markdown files have the required header format."
-            fi
-          shell: bash
+  markdown-header-check:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: _posts
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Check Markdown File Headers
+        run: |
+          function check_markdown_header {
+              local file=$1
+              local missing_component=false
+
+              local components=(
+                  "^---$"
+                  "^title:.*"
+                  "^published:.*"
+                  "^description:.*"
+                  "^tags:.*"
+                  "^cover_image:.*"
+                  "^canonical_url:.*"
+                  "^id:.*"
+                  "^---$"
+              )
+
+              echo "Checking file: $file"
+              for component in "${components[@]}"; do
+                  if ! grep -Pq "$component" "$file"; then
+                      echo "[❌] $file - Missing header component: $component"
+                      missing_component=true
+                  fi
+              done
+
+              if [ "$missing_component" = true ]; then
+                  return 1
+              else
+                  echo "[✔] $file - All header components present"
+                  return 0
+              fi
+          }
+
+          IFS=$'\n'
+          error=0
+          total_files=0
+
+          for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
+              check_markdown_header "$file" || error=$((error+1))
+              total_files=$((total_files+1))
+          done
+
+          echo "$total_files file(s) checked."
+          if [ $error -ne 0 ]; then
+              echo "There are files without the required header format."
+              exit 1
+          else
+              echo "All Markdown files have the required header format."
+          fi
+        shell: bash
 
 #   spell-check:
 #     runs-on: ubuntu-latest
