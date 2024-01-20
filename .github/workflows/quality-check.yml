@@ -33,6 +33,10 @@ jobs:
       
       - name: Markdown Link Check
         uses: gaurav-nelson/github-action-markdown-link-check@v1
+        with:
+          use-quiet-mode: 'yes'   # show only broken links
+          use-verbose-mode: 'yes'
+          config-file: ./markdown-links-config.json # for removing any false positives
 
   markdown-header-check:
     runs-on: ubuntu-latest
