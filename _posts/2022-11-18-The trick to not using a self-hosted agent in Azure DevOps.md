@@ -11,18 +11,9 @@ id: 1734102
 
 # The trick to not using a self-hosted agent in Azure DevOps
 
-<!-- markdown-link-check-disable -->
+![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
-[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
-
-<!-- markdown-link-check-disable -->
-
-
-Read on : 
- 
-<a href="https://kunaldaskd.medium.com/?source=post_page-----986bb257ea4--------------------------------">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/798px-Medium_%28website%29_logo.svg.png" alt="Medium Logo" width="200"/>
-</a>
+Reach at : https://heylink.me/kunaldas
 
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*abFuG6O6narmeqHG.png)
