@@ -1,8 +1,19 @@
+---
+title: Exploring Azure Storage Services
+published: false
+description: 'we'll delve into the various Azure storage services, exploring their unique features and use cases.'
+tags: 'azure, cloud, devops'
+cover_image: 'https://media.licdn.com/dms/image/D4D22AQHX6-ddbaicLQ/feedshare-shrink_800/0/1702440527380?e=1708560000&v=beta&t=8LQUTRTjxHB-0ovl1xQX2badC2j8wdEjjbMawyK_0Ec'
+canonical_url: null
+id: 
+---
+
 # Exploring Azure Storage Services 🌐🗄️
 
 Azure, Microsoft's cloud computing service, offers a range of storage solutions designed to meet the diverse needs of modern businesses. In this guide, we'll delve into the various Azure storage services, exploring their unique features and use cases. Whether you're a developer, a data scientist, or an IT professional, understanding these services can enhance your cloud strategy.
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
 ---
 
 ## Table of Contents
@@ -41,6 +52,8 @@ Azure, Microsoft's cloud computing service, offers a range of storage solutions 
 ## Introduction to Azure Storage
 
 Azure Storage is a cloud service at the core of Azure. It offers scalable, durable, and secure storage options for a variety of data types. In this guide, we will explore the different Azure Storage services, understand their functionalities, and see how they can be applied in real-world scenarios.
+
+![azure storage](https://media.licdn.com/dms/image/D4D22AQHX6-ddbaicLQ/feedshare-shrink_800/0/1702440527380?e=1708560000&v=beta&t=8LQUTRTjxHB-0ovl1xQX2badC2j8wdEjjbMawyK_0Ec)
 
 ---
 

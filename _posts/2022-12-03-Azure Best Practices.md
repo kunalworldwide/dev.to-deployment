@@ -10,7 +10,8 @@ id: 1734082
 
 # Azure Best Practices
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
 
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png)

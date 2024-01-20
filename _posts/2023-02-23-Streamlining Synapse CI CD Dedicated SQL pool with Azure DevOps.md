@@ -10,7 +10,8 @@ id: 1734111
 
 # Streamlining Synapse CI/CD & Dedicated SQL pool with Azure DevOps: Best Practices and Implementation Tips
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
 
 
 - [Streamlining Synapse CI/CD \& Dedicated SQL pool with Azure DevOps: Best Practices and Implementation Tips](#streamlining-synapse-cicd--dedicated-sql-pool-with-azure-devops-best-practices-and-implementation-tips)

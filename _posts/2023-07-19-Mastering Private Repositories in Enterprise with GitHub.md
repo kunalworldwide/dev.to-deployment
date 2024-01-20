@@ -11,7 +11,8 @@ id: 1734108
 
 # Mastering Private Repositories in Enterprise with GitHub: A Comprehensive Guide
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
 
 
 

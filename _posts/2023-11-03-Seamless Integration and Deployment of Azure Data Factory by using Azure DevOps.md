@@ -10,7 +10,8 @@ id: 1734080
 
 # Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps
 
-![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
+[![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)](https://heylink.me/kunaldas/)
+
 
 
 - [Seamless Integration and Deployment of Azure Data Factory by using Azure DevOps](#seamless-integration-and-deployment-of-azure-data-factory-by-using-azure-devops)
