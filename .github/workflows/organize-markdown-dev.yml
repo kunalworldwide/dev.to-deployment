@@ -1,22 +1,20 @@
-name: Move and Clean Markdown on PR merge to dev
+name: Process Markdown on push to ingestion-post
 on:
-  pull_request:
+  push:
     branches:
-      - development
-    types: [closed]
+      - ingestion-post
 
   workflow_dispatch:
 
 jobs:
   process-markdown:
-    if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
       with:
-        ref: development
+        ref: ingestion-post
         fetch-depth: 0
 
     - name: Move New Markdown Files
@@ -37,9 +35,10 @@ jobs:
           done
 
     # Commit and push all changes.
-    - name: GIT push to development
+    - name: GIT push changes
       run: |
         git config --global user.name github-actions-bot
         git config --global user.email github-actions@github.com
-        git commit -a -m "Process Markdown files" || echo "No changes to commit"
+        git commit -a -m "Process and clean Markdown files" || echo "No changes to commit"
         git push
+
