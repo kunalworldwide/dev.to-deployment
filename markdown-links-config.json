@@ -1,16 +1,16 @@
 {
     "ignorePatterns": [
       {
-          "pattern": "^https://haylink.me"
+          "pattern": "^https?://haylink.me"
       },
       {
-          "pattern": "^https://twitter.com/"
+          "pattern": "^https?://twitter.com/"
       },
       {
-        "pattern": "^https://x.com/"
+        "pattern": "^https?://x.com/"
       },
       {
-          "pattern": "^https://linkedin.com/"
+          "pattern": "^https?://linkedin.com/"
       }
     ]
 }
