@@ -339,6 +339,6 @@ There are numerous Azure features and services that require ongoing maintenance 
 [![Hashnode](https://i.imgur.com/iwZwo2S.png)](https://kunaldas.hashnode.dev)
 
 ## Connect with Me:
-[![Twitter](https://i.imgur.com/VaorXDP.png)](https://twitter.com/kunald_official)
+[![x](https://i.imgur.com/VaorXDP.png)](https://x.com/kunald_official)
 [![LinkedIn](https://i.imgur.com/ktIHVxm.png)](https://linkedin.com/in/kunaldaskd)
 
