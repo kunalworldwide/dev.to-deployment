@@ -81,10 +81,9 @@ jobs:
           IFS=$'\n'
           error=0
           total_files=0
-
           ls -la
-          
-          for file in $(git diff --name-only --diff-filter=ACMRT ${{ github.event.before }} ${{ github.sha }} | grep '\.md$'); do
+          # Loop over all Markdown files in the current directory
+          for file in *.md; do
               check_markdown_header "$file" || error=$((error+1))
               total_files=$((total_files+1))
           done
