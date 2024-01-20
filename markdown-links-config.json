@@ -1,20 +1,43 @@
+// {
+//     "retryCount": 12,
+//     "fallbackRetryDelay": "60s",
+//     "timeout": "30s",
+//     "aliveStatusCodes": [429, 200, 403, 999, 400],
+//     "ignorePatterns": [
+//         {
+//             "pattern": "^https?://haylink.me"
+//         },
+//         {
+//             "pattern": "^https?://twitter.com/"
+//         },
+//         {
+//           "pattern": "^https?://x.com/"
+//         },
+//         {
+//             "pattern": "^https?://linkedin.com/"
+//         }
+//       ]
+//   }
+
 {
-    "retryCount": 12,
-    "fallbackRetryDelay": "60s",
-    "timeout": "30s",
-    "aliveStatusCodes": [429, 200, 403, 0],
     "ignorePatterns": [
-        {
-            "pattern": "^https?://haylink.me"
-        },
-        {
-            "pattern": "^https?://twitter.com/"
-        },
-        {
-          "pattern": "^https?://x.com/"
-        },
-        {
-            "pattern": "^https?://linkedin.com/"
+      {
+          "pattern": "^http://localhost"
+      },
+      {
+          "pattern": "^https://twitter.com/"
+      },
+      {
+          "pattern": "^https://opensource.org/"
+      }
+    ],
+    "aliveStatusCodes": [200],
+    "httpHeaders": [
+      {
+        "urls": ["https://docs.github.com/"],
+        "headers": {
+          "Accept-Encoding": "*"
         }
-      ]
+      }
+    ]
   }
