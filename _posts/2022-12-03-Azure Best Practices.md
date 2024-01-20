@@ -12,9 +12,7 @@ id: 1734082
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
-<!-- markdown-link-check-disable -->
 Reach at : https://heylink.me/kunaldas
-<!-- markdown-link-check-enable -->
 
 
 ![](https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png)

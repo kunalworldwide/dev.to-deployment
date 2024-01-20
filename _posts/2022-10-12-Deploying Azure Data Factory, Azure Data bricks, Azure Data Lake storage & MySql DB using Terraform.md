@@ -14,9 +14,9 @@ date: '2024-01-18T18:58:09Z'
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
-<!-- markdown-link-check-disable -->
+
 Reach at : https://heylink.me/kunaldas
-<!-- markdown-link-check-enable -->
+
 
 Here I am going to share some terraform code to deploy ADF, ADLS, ADB, and several other necessary resources.
 

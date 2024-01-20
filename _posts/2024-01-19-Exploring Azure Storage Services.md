@@ -14,9 +14,7 @@ Azure, Microsoft's cloud computing service, offers a range of storage solutions 
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
-<!-- markdown-link-check-disable -->
 Reach at : https://heylink.me/kunaldas
-<!-- markdown-link-check-enable -->
 ---
 
 ## Table of Contents
