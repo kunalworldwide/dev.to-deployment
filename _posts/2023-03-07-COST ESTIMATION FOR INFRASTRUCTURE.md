@@ -12,7 +12,9 @@ id: 1734110
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
+<!-- markdown-link-check-disable -->
 Reach at : https://heylink.me/kunaldas
+<!-- markdown-link-check-enable -->
 
 
 - [COST ESTIMATION FOR INFRASTRUCTURE](#cost-estimation-for-infrastructure)

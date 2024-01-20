@@ -13,7 +13,9 @@ id: 1734108
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
+<!-- markdown-link-check-disable -->
 Reach at : https://heylink.me/kunaldas
+<!-- markdown-link-check-enable -->
 
 
 
