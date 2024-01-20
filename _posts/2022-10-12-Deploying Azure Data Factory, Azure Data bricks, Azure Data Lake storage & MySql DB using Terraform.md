@@ -231,5 +231,7 @@ This is a complete part by part snippets to create a running ADB ADF system, fee
 [![Hashnode](https://i.imgur.com/iwZwo2S.png)](https://kunaldas.hashnode.dev)
 
 ## Connect with Me:
-[![Twitter](https://i.imgur.com/VaorXDP.png)](https://twitter.com/kunald_official)
+![Twitter](https://i.imgur.com/VaorXDP.png)
+[Twitter Profile](https://twitter.com/kunald_official)
+
 [![LinkedIn](https://i.imgur.com/ktIHVxm.png)](https://linkedin.com/in/kunaldaskd)
