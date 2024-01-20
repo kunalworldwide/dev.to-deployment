@@ -1,0 +1,20 @@
+{
+    "retryCount": 12,
+    "fallbackRetryDelay": "60s",
+    "timeout": "30s",
+    "aliveStatusCodes": [429, 200, 403],
+    "ignorePatterns": [
+        {
+            "pattern": "^https?://haylink.me"
+        },
+        {
+            "pattern": "^https?://twitter.com/"
+        },
+        {
+          "pattern": "^https?://x.com/"
+        },
+        {
+            "pattern": "^https?://linkedin.com/"
+        }
+      ]
+  }

@@ -14,9 +14,7 @@ Azure, Microsoft's cloud computing service, offers a range of storage solutions 
 
 ![Kunal Das, Author](https://miro.medium.com/v2/resize:fill:44:44/1*kfaefcgQPHrPsNobjuiiSg.jpeg)
 
-<!-- markdown-link-check-disable -->
 Reach at : https://heylink.me/kunaldas
-<!-- markdown-link-check-enable -->
 ---
 
 ## Table of Contents
@@ -162,23 +160,12 @@ When selecting an Azure Storage service, consider factors like data type, access
 Azure's diverse storage options offer flexible, scalable, and secure solutions to meet the ever-evolving data storage needs of businesses. By understanding the strengths and applications of each service, you can make informed decisions about your cloud storage strategy.
 
 ---
-
 ## Read my blogs:
-
-<a href="https://kunaldaskd.medium.com">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0d/Medium_%28website%29_logo.svg/798px-Medium_%28website%29_logo.svg.png" alt="Medium Logo" height="20" style="margin-right: 10px;"/>
-</a>
-<a href="https://dev.to/kunaldas">
-    <img src="https://dev-to-uploads.s3.amazonaws.com/uploads/logos/resized_logo_UQww2soKuUsjaOGNB38o.png" alt="Dev.to Logo" height="20" style="margin-right: 10px;"/>
-</a>
-<a href="https://kunaldas.hashnode.dev">
-    <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1675531271955/ALEtNA1cM.png?auto=compress" alt="Hashnode Logo" height="20"/>
-</a>
+[![Medium](https://i.imgur.com/TgYYM9w.png)](https://kunaldaskd.medium.com)
+[![DEV](https://i.imgur.com/bp3qHWb.png)](https://dev.to/kunaldas)
+[![Hashnode](https://i.imgur.com/iwZwo2S.png)](https://kunaldas.hashnode.dev)
 
 ## Connect with Me:
-
-<p align="left">
-<a href="https://twitter.com/kunald_official" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/twitter.svg" alt="kunald_official" height="30" width="40" style="margin-right: 10px;"/></a>
-<a href="https://linkedin.com/in/kunaldaskd" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="kunaldaskd" height="30" width="40"/></a>
-</p>
+[![x](https://i.imgur.com/VaorXDP.png)](https://x.com/kunald_official)
+[![LinkedIn](https://i.imgur.com/ktIHVxm.png)](https://linkedin.com/in/kunaldaskd)
 
