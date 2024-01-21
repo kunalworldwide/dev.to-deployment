@@ -1,6 +1,6 @@
 ---
 title: A comprehensive list of Azure Best Practices
-published: false
+published: true
 description: 'Azure best practices assist businesses in making the most of Azure resources to create and maintain scalable, cost-efficient, and secure solutions on the Microsoft Azure cloud.'
 tags: 'azure, cloud, microsoft'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png'
