@@ -6,6 +6,7 @@ tags: 'azure, github, git'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*o_r7JdrqQTcB0kkb3AF1UA.jpeg'
 canonical_url: null
 id: 1734108
+date: '2024-01-21T12:36:56Z'
 ---
 
 

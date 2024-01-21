@@ -6,6 +6,7 @@ tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/0*CoufxbMwN_U4G5CV'
 canonical_url: null
 id: 1734111
+date: '2024-01-21T12:36:58Z'
 ---
 
 # Streamlining Synapse CI/CD & Dedicated SQL pool with Azure DevOps: Best Practices and Implementation Tips

@@ -6,6 +6,7 @@ tags: 'azure, cloud, microsoft'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/0*JFxFUjxO8pAiWsq0.png'
 canonical_url: null
 id: 1734082
+date: '2024-01-21T12:36:57Z'
 ---
 
 # Azure Best Practices
