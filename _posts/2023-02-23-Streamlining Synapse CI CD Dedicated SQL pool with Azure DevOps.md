@@ -1,6 +1,6 @@
 ---
 title: Streamlining Synapse CI/CD & Dedicated SQL pool with Azure DevOps
-published: false
+published: true
 description: A straightforward easy guide to deploy synapse and SQL pool using Azure DevOps
 tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/0*CoufxbMwN_U4G5CV'

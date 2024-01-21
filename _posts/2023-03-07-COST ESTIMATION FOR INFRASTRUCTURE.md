@@ -1,6 +1,6 @@
 ---
 title: COST ESTIMATION FOR INFRASTRUCTURE
-published: false
+published: true
 description: Cost estimation while using terraform to determine and manage the cost of a project
 tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*CjGEdkxtCmDqcuMmCvS8PA.png'
