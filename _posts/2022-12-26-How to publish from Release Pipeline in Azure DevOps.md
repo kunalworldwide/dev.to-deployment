@@ -6,6 +6,7 @@ tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*A_IveIUhnhHOzi_a04hecA.png'
 canonical_url: null
 id: 1734117
+date: '2024-01-21T12:36:02Z'
 ---
 
 # How to publish from Release Pipeline in Azure DevOps

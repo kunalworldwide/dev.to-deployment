@@ -6,6 +6,7 @@ tags: 'azure, cloud, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*CjGEdkxtCmDqcuMmCvS8PA.png'
 canonical_url: null
 id: 1734110
+date: '2024-01-21T12:36:03Z'
 ---
 
 # COST ESTIMATION FOR INFRASTRUCTURE

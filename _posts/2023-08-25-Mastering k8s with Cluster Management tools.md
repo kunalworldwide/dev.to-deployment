@@ -6,6 +6,7 @@ tags: 'azure, docker, kubernetes'
 cover_image: 'https://miro.medium.com/v2/resize:fit:608/1*XwnKb_efOFg5HtGeGjIGjg.png'
 canonical_url: null
 id: 1734109
+date: '2024-01-21T12:36:04Z'
 ---
 
 # Mastering Kubernetes: A Deep Dive into Cluster Management Tools Every DevOps Engineer Should Know

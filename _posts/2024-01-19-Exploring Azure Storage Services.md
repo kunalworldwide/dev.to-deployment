@@ -1,11 +1,12 @@
 ---
 title: Exploring Azure Storage Services
 published: true
-description: we'll delve into the various Azure storage services, exploring their unique features and use cases.
+description: 'we''ll delve into the various Azure storage services, exploring their unique features and use cases.'
 tags: 'azure, docker, kubernetes'
 cover_image: 'https://media.licdn.com/dms/image/D4D22AQHX6-ddbaicLQ/feedshare-shrink_800/0/1702440527380?e=1708560000&v=beta&t=8LQUTRTjxHB-0ovl1xQX2badC2j8wdEjjbMawyK_0Ec'
 canonical_url: null
 id: 1736215
+date: '2024-01-21T12:36:06Z'
 ---
 
 # Exploring Azure Storage Services 🌐🗄️
