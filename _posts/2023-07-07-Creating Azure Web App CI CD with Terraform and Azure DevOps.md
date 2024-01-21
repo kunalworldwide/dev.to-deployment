@@ -6,6 +6,7 @@ tags: 'azure, terraform, devops'
 cover_image: 'https://miro.medium.com/v2/resize:fit:700/1*hj3ezml_2bs9uDUssU4oLQ.png'
 canonical_url: null
 id: 1734107
+date: '2024-01-21T12:38:01Z'
 ---
 
 # Step-by-Step Guide: Creating Azure Web App CI/CD with Terraform and Azure DevOps
