@@ -1,12 +1,12 @@
 ---
 title: Setting Up a Comprehensive Python Build Validation Pipeline in Azure DevOps
 published: true
-description: 'A robust build validation pipeline for your Python projects using Azure DevOps'
+description: A robust build validation pipeline for your Python projects using Azure DevOps
 tags: 'azure, docker, kubernetes'
 cover_image: 'https://r2.flux1.ai/result-BsRO6vZL8k.webp'
 canonical_url: null
-id: 
-date: 
+id: 2024622
+date: '2024-10-03T16:49:00Z'
 ---
 
 # Setting Up a Comprehensive Python Build Validation Pipeline in Azure DevOps
